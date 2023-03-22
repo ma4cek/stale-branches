@@ -717,7 +717,7 @@ function getRecentCommitLogin(sha) {
                 per_page: 1,
                 page: 1
             });
-            lastCommitter = commitResponse.data.committer.login;
+            lastCommitter = commitResponse.data.author.login;
             assert.ok(lastCommitter, 'Committer cannot be empty.');
         }
         catch (err) {
